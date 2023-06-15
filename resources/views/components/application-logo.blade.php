@@ -1,0 +1,1 @@
+<img src="{{ asset('logo/CV.png') }}" width=50px>
