@@ -24,7 +24,7 @@ class AboutContronller extends Controller
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();  // 3434343443.jpg
 
             Image::make($image)->resize(503,605)->save('upload/home_about/'.$name_gen);
-            $save_url = 'upload/home_slide/'.$name_gen;
+            $save_url = 'upload/home_about/'.$name_gen;
 
             About::findOrFail($about_id)->update([
                 'title' => $request->title,
@@ -58,5 +58,11 @@ class AboutContronller extends Controller
 
         } // end Else
 
+     } // End Method
+
+
+     public function HomeAbout(){
+        $aboutpage = About::find(1);
+        return view('frontend.about_page', compact('aboutpage'));
      } // End Method
 }
