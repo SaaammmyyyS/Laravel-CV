@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutContronller;
+use App\Http\Controllers\Home\PortfolioController;
 
 
 /*
@@ -64,5 +65,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// -------> Portfolio All Route <---------
+Route::controller(PortfolioController::class)->group(function(){
+    Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
+    Route::get('/add/portfolio', 'AddPortfolio')->name('add.portfolio');
+    Route::post('/store/portfolio', 'StorePortfolio')->name('store.portfolio');
+    Route::get('/edit/portfolio/{id}', 'EditPortfolio')->name('edit.portfolio');
+    Route::post('/update/portfolio', 'UpdatePortfolio')->name('update.portfolio');
+});
+// ----------------------------------
 
 require __DIR__.'/auth.php';
