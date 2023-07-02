@@ -44,7 +44,7 @@
                                     <td><img src="{{asset($item->portfolio_image)}}" style="width: 60px; height: 50px"></td>
                                     <td>
                                         <a href="{{route('edit.portfolio', $item->id)}}" class="btn btn-info sm" title="Edit Data"><i class=" ri-edit-2-fill"></i></a>
-                                        <a href="{{route('delete.multi.image', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="ri-delete-bin-fill"></i></a>
+                                        <a href="{{route('delete.portfolio', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="ri-delete-bin-fill"></i></a>
                                     </td>
                                 </tr>
 
