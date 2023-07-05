@@ -13,7 +13,6 @@
             <div class="col-xl-5 col-lg-6">
                 <div class="banner__content">
                     <h2 class="title wow fadeInUp" data-wow-delay=".2s"><span>{{ $homeslide->title }}</span> <br>{{ $homeslide->short_title }}</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s">I'm a Rasalina based product design & visual designer focused on crafting clean & user‑friendly experiences</p>
                     <a href="about.html" class="btn banner__btn wow fadeInUp" data-wow-delay=".6s">more about me</a>
                 </div>
             </div>
