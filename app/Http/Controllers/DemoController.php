@@ -10,7 +10,11 @@ class DemoController extends Controller
         return view('about');
     }
 
-    public function Contact(){
+    public function ContactMethod(){
         return view('contact');
+    }
+
+    public function HomeMain(){
+        return view('frontend.index');
     }
 }
